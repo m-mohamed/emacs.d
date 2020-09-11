@@ -15,4 +15,11 @@
 (require 'ein)
 (require 'ein-notebook)
 
+;; flyspell 2 finger click mac
+(eval-after-load "flyspell"
+  '(progn
+     (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
+     (define-key flyspell-mouse-map [mouse-3] #'undefined)))
+
+(pdf-tools-install)
 (provide 'init-local)
