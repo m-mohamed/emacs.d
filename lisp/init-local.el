@@ -21,5 +21,10 @@
      (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
      (define-key flyspell-mouse-map [mouse-3] #'undefined)))
 
+;; Set the location of reveal .js
+(setq org-reveal-root "file:///Users/mohamed/Code/reveal.js")
+
+(setq org-plantuml-jar-path (expand-file-name "~/.emacs.d/site-lisp/plantuml.jar"))
+
 (pdf-tools-install)
 (provide 'init-local)
