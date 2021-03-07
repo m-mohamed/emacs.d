@@ -2,6 +2,7 @@
 (setq org-agenda-files '("~/Dropbox/org/inbox.org"
                          "~/Dropbox/org/projects.org"
                          "~/Dropbox/org/notes.org"
+                         "~/Dropbox/org/schedule.org"
                          "~/Dropbox/org/orphaned-tasks.org"))
 ;; org superstar setup
 (require 'org-superstar)
@@ -28,3 +29,9 @@
 
 (pdf-tools-install)
 (provide 'init-local)
+
+(require 'org-gcal)
+(setq org-gcal-client-id "your-id-foo.apps.googleusercontent.com"
+      org-gcal-client-secret "your-secret"
+      org-gcal-fetch-file-alist '(("mohamed@movement-x.com" .  "~Dropbox/org/schedule.org")))
+(add-hook 'org-agenda-mode-hook 'org-gcal-fetch)
