@@ -31,7 +31,7 @@
 (provide 'init-local)
 
 (require 'org-gcal)
-(setq org-gcal-client-id "your-id-foo.apps.googleusercontent.com"
-      org-gcal-client-secret "your-secret"
-      org-gcal-fetch-file-alist '(("mohamed@movement-x.com" .  "~Dropbox/org/schedule.org")))
+(setq org-gcal-client-id "834396782636-aie46438goov9g86bb6f5an0qu4tujgs.apps.googleusercontent.com"
+      org-gcal-client-secret "0m83actKNopscNjMLG0kTOVG"
+      org-gcal-fetch-file-alist '(("mohamed@movement-x.com" .  "~/Dropbox/org/schedule.org")))
 (add-hook 'org-agenda-mode-hook 'org-gcal-fetch)
